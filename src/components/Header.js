@@ -70,7 +70,6 @@ const Header = () => {
     }
   };
 
-
   return (
     <Box
       position="fixed"
@@ -93,7 +92,7 @@ const Header = () => {
         >
           <nav>
             {/* Add social media links based on the `socials` data */}
-            <HStack spacing={4} >
+            <HStack spacing={8}>
               <a href={socials[0].url}>
                 <FontAwesomeIcon icon={socials[0].icon} size="2x" />
               </a>
@@ -110,8 +109,6 @@ const Header = () => {
                 <FontAwesomeIcon icon={socials[4].icon} size="2x" />
               </a>
             </HStack>
-
-            
           </nav>
           <nav>
             <HStack spacing={8}>
