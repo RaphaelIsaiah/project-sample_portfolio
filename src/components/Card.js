@@ -12,27 +12,30 @@ const Card = ({ title, description, imageSrc }) => {
       bg={"white"}
       color={"black"}
       borderRadius={"xl"}
+      cursor={"pointer"}
       // borderWidth={"0"}
       // overflow={"hidden"}
       // maxW={'100%'}
     >
       <Heading />
       <VStack>
-        <Image
-          borderRadius={"xl"}
-          w={"100%"}
-          src={imageSrc}
-          alt="Dan Abramov"
-        />
+        <Image borderRadius={"xl"} w={"100%"} src={imageSrc} alt={title} />
         <Box p={"1rem"}>
           <Heading as="h5" size="md" mb={"1rem"}>
             {title}
           </Heading>
           {/* <Heading >React Space</Heading> */}
-          <Text mb={"1rem"} color={'#65758B'} fontWeight={'480'} fontSize={'lg'}>{description}</Text>
-          <Text fontWeight={"500"}>
-            See more  <FontAwesomeIcon icon={faArrowRight} size="1x" />
+          <Text
+            mb={"1rem"}
+            color={"#65758B"}
+            fontWeight={"480"}
+            fontSize={"lg"}
+          >
+            {description}
           </Text>
+          <HStack>
+            <p>See more</p> <FontAwesomeIcon icon={faArrowRight} size="1x" />
+          </HStack>
         </Box>
       </VStack>
     </Box>
