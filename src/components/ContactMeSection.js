@@ -16,6 +16,7 @@ import * as Yup from "yup";
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
+import { color } from "framer-motion";
 
 const ContactMeSection = () => {
   const { isLoading, response, submit } = useSubmit();
@@ -90,12 +91,12 @@ const ContactMeSection = () => {
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type" {...formik.getFieldProps("type")}>
-                  <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
+                <Select id="type" name="type" {...formik.getFieldProps("type")} >
+                  <option style={{color: "white", background: "#6B46C1" } } value="hireMe">Freelance project proposal</option>
+                  <option style={{color: "white", background: "#6B46C1"}} value="openSource">
                     Open source consultancy session
                   </option>
-                  <option value="other">Other</option>
+                  <option style={{color: "white", background: "#6B46C1"}}value="other">Other</option>
                 </Select>
               </FormControl>
               <FormControl
