@@ -24,7 +24,6 @@ const Card = ({ title, description, imageSrc }) => {
           <Heading as="h5" size="md" mb={"1rem"}>
             {title}
           </Heading>
-          {/* <Heading >React Space</Heading> */}
           <Text
             mb={"1rem"}
             color={"#65758B"}
